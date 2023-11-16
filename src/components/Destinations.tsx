@@ -2,9 +2,11 @@ import React from 'react'
 import { Header, Slides } from '.'
 import Image from 'next/image'
 
-type Props = {}
+type Props = {
+    data: any
+}
 
-const images = ['cover4.jpg', 'cover7.jpg', 'cover3.jpg', 'cover5.jpg'];
+const images = ['/turkiye/one.jpg', '/turkiye/two.jpg', '/turkiye/three.jpg', '/turkiye/four.jpg'];
 
 
 export const Destinations = (props: Props) => {
@@ -15,9 +17,9 @@ export const Destinations = (props: Props) => {
         <div className='min-h-screen'>
             <Header setIsLoggedin={(x: boolean) => setIsLoggedin(x)} />
             <Slides
-                images={images}
-                title='İstanbul, Türkiye'
-                subtitle='Discover the timeless allure of Istanbul, where historic treasures and vibrant culture converge in an unforgettable embrace.'
+                images={props.data.images}
+                title={props.data.title}
+                subtitle={props.data.subTitle}
             />
             <div className='w-full h-[80vh] py-5 md:py-10 px-4 max-w-7xl mx-auto grid gap-4 grid-cols-5'>
                 <div className='md:col-span-3 col-span-5'>

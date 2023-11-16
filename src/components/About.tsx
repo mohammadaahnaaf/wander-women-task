@@ -2,7 +2,7 @@ import React from 'react'
 import { Header, Slides } from '.'
 
 type Props = {}
-const images = ['cover4.jpg', 'cover7.jpg', 'cover3.jpg', 'cover5.jpg'];
+const images = ['/slides/cover4.jpg', '/slides/cover7.jpg', '/slides/cover3.jpg', '/slides/cover5.jpg'];
 
 export const About = (props: Props) => {
 

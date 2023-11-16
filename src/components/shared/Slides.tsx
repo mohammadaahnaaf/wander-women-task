@@ -32,13 +32,13 @@ export const Slides = (props: Props) => {
                     <Image
                         fill
                         key={index}
-                        src={`/slides/${image}`}
+                        src={`${image}`}
                         alt={`Image ${index + 1}`}
                         className={`absolute top-0 left-0 w-full h-full object-cover content-center transition-opacity duration-1000 ${index === currentImageIndex ? 'opacity-100' : 'opacity-0'
                             }`}
                     />
                 ))}
-                <div className='absolute grid gap-6 bg-black bg-opacity-70 h-full w-full items-center justify-center'>
+                <div className='absolute grid gap-6 bg-black bg-opacity-60 h-full w-full items-center justify-center'>
                     <div className='w-full px-4 md:px-0 max-w-5xl mx-auto'>
                         <h1 className='text-2xl md:text-6xl py-6 text-white font-semibold'>{props.title}</h1>
                         <p className='text-lg md:text-2xl text-white'>{props.subtitle}</p>

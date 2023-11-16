@@ -37,9 +37,9 @@ export function Header(props: Props) {
     return (
         <header className="bg-white">
             {/* PC View */}
-            <nav className="mx-auto flex max-w-7xl px-4 py-4 lg:py-6" aria-label="Global">
+            <nav className="mx-auto flex max-w-7xl px-4 py-4" aria-label="Global">
                 <div className="flex w-full lg:w-auto justify-between items-center">
-                    <div className='relative h-12 w-14'>
+                    <div className='relative h-14 w-16'>
                         <Image
                             fill
                             src="/logo.png"
@@ -60,6 +60,9 @@ export function Header(props: Props) {
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-12 w-full items-center justify-center">
 
+                    <Link href="/" className="text-md font-semibold leading-6 text-black">
+                        Home
+                    </Link>
                     <Link href="/about" className="text-md font-semibold leading-6 text-black">
                         About
                     </Link>
