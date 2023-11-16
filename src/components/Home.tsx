@@ -64,7 +64,7 @@ export const Home = (props: Props) => {
             </Animasyon>
             <div
                 // style={{ background: 'url(/slides/cover1.jpg)', objectFit: 'cover', objectPosition: 'center' }}
-                className='h-[70vh] bg-[url("/slides/cover1.jpg")] bg-cover bg-no-repeat w-full grid items-center z-0 '>
+                className='h-[70vh] bg-[url("/slides/home.png")] bg-cover bg-no-repeat w-full grid items-center z-0 '>
 
                 {/* <div style={{background: 'url(/slides/cover1.jpg)'}} className='object-cover flex content-center absolute w-full h-full'>
                     <Image src='/slides/cover1.jpg' fill alt='' className='object-cover content-center z-0' />
