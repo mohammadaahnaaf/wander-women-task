@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/public/logo.png" alt="Wander Women Logo">
+  <img src="/public/logo.png" width="250" height="250" alt="Wander Women Logo">
 </p>
 
 # Wander Women | Dev Task
