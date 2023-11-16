@@ -1,14 +1,38 @@
-import { Fragment, useState } from 'react'
+"use client"
+
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import axios from 'axios'
 
 type Props = {
-
+    setIsLoggedin: any
 }
 
+const API_BASE_URL = 'https://reqres.in/api';
+
 export function Header(props: Props) {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+    const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
+    const [token, setToken] = React.useState('');
+
+    const handleLogout = async () => {
+        try {
+            await axios.post(`${API_BASE_URL}/logout`, null, {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+            localStorage.removeItem('token')
+            setToken('');
+            props.setIsLoggedin(false)
+            alert('Logout successful!');
+
+        } catch (error) {
+            console.error('Error during logout:', error);
+        }
+    };
 
     return (
         <header className="bg-white">
@@ -18,7 +42,7 @@ export function Header(props: Props) {
                     <div className='relative h-12 w-14'>
                         <Image
                             fill
-                            src="/logo.png" 
+                            src="/logo.png"
                             alt="logo"
                         />
                     </div>
@@ -57,7 +81,7 @@ export function Header(props: Props) {
                             </Popover.Button>
 
                             <Transition
-                                as={Fragment}
+                                as={React.Fragment}
                                 enter="transition ease-out duration-200"
                                 enterFrom="opacity-0 translate-y-1"
                                 enterTo="opacity-100 translate-y-0"
@@ -85,7 +109,7 @@ export function Header(props: Props) {
                                                 <path fillRule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm10.72 4.72a.75.75 0 011.06 0l3 3a.75.75 0 010 1.06l-3 3a.75.75 0 11-1.06-1.06l1.72-1.72H9a.75.75 0 010-1.5h10.94l-1.72-1.72a.75.75 0 010-1.06z" clipRule="evenodd" />
                                             </svg>
                                         </div>
-                                        <button className="block text-md font-semibold">
+                                        <button type='button' onClick={handleLogout} className="block text-md font-semibold">
                                             Logout
                                             <span className="absolute inset-0" />
                                         </button>
@@ -154,6 +178,16 @@ export function Header(props: Props) {
                                             <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
                                         </svg>
                                         <span>Profile</span>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button type='button' onClick={handleLogout}
+                                        className="flex gap-2 rounded-lg px-3 bg-white bg-opacity-50 shadow-md py-2 w-full text-md font-semibold leading-7 text-black hover:bg-gray-50"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                            <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
+                                        </svg>
+                                        <span>Logout</span>
                                     </button>
                                 </div>
                             </div>
