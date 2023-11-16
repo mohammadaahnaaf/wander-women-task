@@ -12,7 +12,7 @@ export const Home = (props: Props) => {
     const [isLoggedin, setIsLoggedin] = React.useState<boolean>(true)
 
     React.useEffect(() => {
-        
+
         let theToken = localStorage.getItem('token')
         setIsLoggedin(!!theToken)
 
@@ -77,7 +77,7 @@ export const Home = (props: Props) => {
                             </select>
                         </div>
                         <div className='col-span-1 items-end h-full grid w-full'>
-                            <label className='text-transparent w-full text-sm font-semibold mb-2'>Room Type</label>
+                            <label className='text-transparent w-full text-sm font-semibold mb-2'>Type</label>
                             <button type='button'
                                 onClick={handleSave}
                                 className='text-white w-full bg-[red] bg-opacity-50 hover:bg-opacity-60 p-2.5 ring-2 ring-white'>Find</button>
