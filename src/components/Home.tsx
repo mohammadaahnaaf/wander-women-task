@@ -62,10 +62,16 @@ export const Home = (props: Props) => {
             <Animasyon delay={300}>
                 <Header setIsLoggedin={(x: boolean) => setIsLoggedin(x)} />
             </Animasyon>
-            <div className='h-[70vh] relative w-full grid items-center bg-gradient-to-tr from-green-100 via-red-100 to-blue-100'>
-                <Image src='/slides/cover1.jpg' fill alt='' className='z-0' />
+            <div
+                // style={{ background: 'url(/slides/cover1.jpg)', objectFit: 'cover', objectPosition: 'center' }}
+                className='h-[70vh] bg-[url("/slides/cover1.jpg")] bg-cover bg-no-repeat w-full grid items-center z-0 '>
+
+                {/* <div style={{background: 'url(/slides/cover1.jpg)'}} className='object-cover flex content-center absolute w-full h-full'>
+                    <Image src='/slides/cover1.jpg' fill alt='' className='object-cover content-center z-0' />
+                </div> */}
+
                 <Animasyon delay={500}>
-                    <div className='z-10 w-full duration-500 hover:scale-95 max-w-5xl mx-auto flex gap-4 p-5 bg-sky-500 bg-opacity-60 shadow-lg'>
+                    <div className='z-20 w-full duration-500 hover:scale-95 max-w-5xl mx-auto flex gap-4 p-5 bg-sky-500 bg-opacity-60 shadow-lg'>
                         <div className='grid grid-cols-2 md:grid-cols-4 lg:ring-2 ring-white gap-2 md:gap-4 items-center backdrop-blur-sm p-2 md:p-6'>
                             <div className='col-span-2 md:col-span-4 text-center'>
                                 <h1 className='text-white font-semibold text-2xl'>Book A Spot Now</h1>

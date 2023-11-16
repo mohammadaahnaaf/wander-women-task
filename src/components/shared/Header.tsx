@@ -77,7 +77,7 @@ export function Header(props: Props) {
                 <Popover.Group className='flex items-center'>
                     <div className="hidden items-center duration-300 lg:flex">
                         <Popover className="relative">
-                            <Popover.Button className="flex items-center outline-none focus:ring-0 leading-6 text-black hover:text-pink-500">
+                            <Popover.Button className="flex items-center outline-none focus:ring-0 leading-6 text-black hover:text-sky-500">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
                                     <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
                                 </svg>
@@ -92,9 +92,9 @@ export function Header(props: Props) {
                                 leaveFrom="opacity-100 translate-y-0"
                                 leaveTo="opacity-0 translate-y-1"
                             >
-                                <Popover.Panel className="absolute p-3 right-0 top-full z-10 mt-3 w-screen max-w-xs overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                                <Popover.Panel className="absolute p-3 right-0 top-full z-40 mt-3 w-screen max-w-xs overflow-hidden rounded-xl bg-white ring-1 shadow-lg ring-sky-500/10">
 
-                                    <div className="group relative flex items-center gap-x-2 rounded-lg p-3 leading-6 hover:bg-pink-100 hover:text-pink-700">
+                                    <div className="group relative z-40 flex items-center gap-x-2 rounded-lg p-3 leading-6 hover:bg-sky-100 hover:text-sky-700">
                                         <div className="flex">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                                                 <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
@@ -106,7 +106,7 @@ export function Header(props: Props) {
                                         </Link>
                                     </div>
 
-                                    <div className="group relative flex items-center gap-x-2 rounded-lg p-3 leading-6 hover:bg-pink-100 hover:text-pink-700">
+                                    <div className="group relative flex items-center gap-x-2 rounded-lg p-3 leading-6 hover:bg-sky-100 hover:text-sky-700">
                                         <div className="flex">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
                                                 <path fillRule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm10.72 4.72a.75.75 0 011.06 0l3 3a.75.75 0 010 1.06l-3 3a.75.75 0 11-1.06-1.06l1.72-1.72H9a.75.75 0 010-1.5h10.94l-1.72-1.72a.75.75 0 010-1.06z" clipRule="evenodd" />
@@ -127,8 +127,8 @@ export function Header(props: Props) {
 
             {/* Mobile views */}
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                <div className="fixed inset-0 z-10" />
-                <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full h-[50vh] sm:h-full overflow-y-auto bg-gradient-to-tr from-red-100 to-green-100 px-4 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div className="fixed inset-0 z-40" />
+                <Dialog.Panel className="fixed inset-y-0 right-0 z-40 w-full h-[50vh] sm:h-full overflow-y-auto bg-gradient-to-tr from-red-100 to-green-100 px-4 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <Link href='/' className='relative sm:hidden w-14 h-12'>
                             <Image
