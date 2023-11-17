@@ -7,7 +7,7 @@ type Props = {}
 export const Footer = (props: Props) => {
     return (
         <footer
-            className="bg-gradient-to-tr text-center from-yellow-200 via-rose-100 to-teal-100 lg:text-left">
+            className="bg-gradient-to-tr text-center from-yellow-200 via-sky-50 to-yellow-100 lg:text-left">
 
 
             <div className="mx-6 py-10 text-center md:text-left">
