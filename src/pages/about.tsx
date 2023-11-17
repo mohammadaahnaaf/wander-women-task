@@ -1,4 +1,4 @@
-import { About } from '@women/components'
+import { About, Footer } from '@women/components'
 import Head from 'next/head'
 import React from 'react'
 
@@ -11,6 +11,7 @@ const AboutPage = (props: Props) => {
                 <title>Wander Women | About</title>
             </Head>
             <About />
+            <Footer />
         </>
     )
 }

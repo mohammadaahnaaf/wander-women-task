@@ -1,4 +1,4 @@
-import { Destinations } from '@women/components'
+import { Destinations, Footer } from '@women/components'
 import { destinationsData } from '@women/data'
 import React from 'react'
 import { useRouter } from 'next/router';
@@ -21,6 +21,7 @@ const DestinationsPage = (props: Props) => {
                     <Destinations data={x} key={index} />
                 ) : null
             })}
+            <Footer />
         </>
     )
 }

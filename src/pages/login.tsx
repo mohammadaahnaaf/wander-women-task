@@ -3,8 +3,9 @@
 import React from 'react'
 import axios from 'axios';
 import Link from 'next/link';
-import { Header } from '@women/components';
+import { Footer, Header } from '@women/components';
 import Router from 'next/router';
+import Head from 'next/head';
 
 type Props = {}
 
@@ -37,6 +38,9 @@ const LoginPage = (props: Props) => {
 
   return (
     <>
+      <Head>
+        <title>Wander Women | Login</title>
+      </Head>
       <Header setIsLoggedin={(x: boolean) => setIsLoggedin(x)} />
       <div className="grid h-full w-full items-center">
         <div className="gap-4 max-w-4xl bg-gradient-to-tr from-green-50 via-pink-50 to-purple-50 rounded-md shadow-xl py-14 px-5 mx-auto w-full grid ">
@@ -77,6 +81,7 @@ const LoginPage = (props: Props) => {
 
         </div>
       </div>
+      <Footer />
     </>
   )
 }

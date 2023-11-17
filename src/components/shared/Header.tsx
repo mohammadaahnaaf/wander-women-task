@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import axios from 'axios'
+import Router from 'next/router'
 
 type Props = {
     setIsLoggedin: any
@@ -27,6 +28,7 @@ export function Header(props: Props) {
             localStorage.removeItem('token')
             setToken('');
             props.setIsLoggedin(false)
+            Router.push('/login')
             alert('Logout successful!');
 
         } catch (error) {
@@ -69,7 +71,7 @@ export function Header(props: Props) {
                     <Link href="/destinations" className="text-md font-semibold leading-6 text-black">
                         Destinations
                     </Link>
-                    <Link href="/contact" className="text-md font-semibold leading-6 text-black">
+                    <Link href="/" className="text-md font-semibold leading-6 text-black">
                         Contact
                     </Link>
 
@@ -100,7 +102,7 @@ export function Header(props: Props) {
                                                 <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
                                             </svg>
                                         </div>
-                                        <Link href='/profile' className="block text-md font-semibold">
+                                        <Link href='/' className="block text-md font-semibold">
                                             Profile
                                             <span className="absolute inset-0" />
                                         </Link>
