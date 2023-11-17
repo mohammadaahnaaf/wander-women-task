@@ -34,10 +34,10 @@ export const About = (props: Props) => {
             <div className='max-w-7xl mx-auto w-full py-10 px-4'>
                 {/* Why Wander Women  */}
                 <div className='grid grid-cols-4 py-6'>
-                    <div className='md:col-span-3 col-span-4'>
-                        <h1 className='text-3xl py-4 border-b text-blue-600 border-blue-600 font-bold'>About Us</h1>
-                        <h1 className='text-5xl py-4 font-bold'>Why Wander Women?</h1>
-                        <p className='text-xl font-normal'>
+                    <div className='md:col-span-3  duration-300 hover:scale-95 col-span-4'>
+                        <h1 className='text-xl md:text-3xl py-4 border-b text-blue-600 border-blue-600 font-bold'>About Us</h1>
+                        <h1 className='text-xl md:text-5xl py-4 font-bold'>Why Wander Women?</h1>
+                        <p className='text-lg md:text-xl font-normal'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellendus, ducimus dolorum eum quas hic non molestiae velit suscipit architecto, ea nam illo labore eveniet deserunt fugit est vel eos!
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellendus, ducimus dolorum eum quas hic non molestiae velit suscipit architecto, ea nam illo labore eveniet deserunt fugit est vel eos!
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellendus, ducimus dolorum eum quas hic non molestiae velit suscipit architecto, ea nam illo labore eveniet deserunt fugit est vel eos!
@@ -47,7 +47,7 @@ export const About = (props: Props) => {
                         </p>
                     </div>
                     <div className='md:col-span-1 relative col-span-4 flex items-center justify-center'>
-                        <div className='grid'>
+                        <div className='grid  duration-300 hover:scale-95'>
                             <div className='relative h-40 w-52'>
                                 <Image className='rotate-12 w-10' src='/bali/five.jpg' fill alt='' />
                             </div>
@@ -58,22 +58,22 @@ export const About = (props: Props) => {
                     </div>
                 </div>
 
-                {/* Why Wander Women  */}
+                {/* our story  */}
                 <div className='grid grid-cols-4 py-6'>
-                    <div className='md:col-span-1 relative col-span-4 flex items-center justify-center'>
+                    <div className='md:col-span-1 order-2 md:order-1 duration-300 hover:scale-95 relative col-span-4 flex items-center justify-center'>
                         <div className='grid'>
                             <div className='relative h-40 w-52'>
-                                <Image className='rotate-12 w-10' src='/bali/five.jpg' fill alt='' />
+                                <Image className='rotate-12 w-10' src='/bali/one.jpg' fill alt='' />
                             </div>
                             <div className='relative h-40 w-52'>
-                                <Image className='w-10 -rotate-12 bg-white p-1' src='/bali/four.jpg' fill alt='' />
+                                <Image className='w-10 -rotate-12 bg-white p-1' src='/bali/two.jpg' fill alt='' />
                             </div>
                         </div>
                     </div>
-                    <div className='md:col-span-3 col-span-4'>
-                        <h1 className='text-3xl py-4 border-b text-blue-600 border-blue-600 font-bold'>Our Story</h1>
-                        <h1 className='text-5xl py-4 font-bold'>How Did We Started?</h1>
-                        <p className='text-xl font-normal'>
+                    <div className='md:col-span-3  duration-300 hover:scale-95 col-span-4'>
+                        <h1 className='text-xl md:text-3xl py-4 border-b text-blue-600 border-blue-600 font-bold'>Our Story</h1>
+                        <h1 className='text-xl md:text-5xl py-4 font-bold'>How Did We Started?</h1>
+                        <p className='text-lg md:text-xl font-normal'>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellendus, ducimus dolorum eum quas hic non molestiae velit suscipit architecto, ea nam illo labore eveniet deserunt fugit est vel eos!
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellendus, ducimus dolorum eum quas hic non molestiae velit suscipit architecto, ea nam illo labore eveniet deserunt fugit est vel eos!
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere repellendus, ducimus dolorum eum quas hic non molestiae velit suscipit architecto, ea nam illo labore eveniet deserunt fugit est vel eos!
@@ -86,9 +86,9 @@ export const About = (props: Props) => {
 
                 {/* Testimonials  */}
                 <div className='grid grid-cols-4 py-6'>
-                    <div className='col-span-4'>
-                        <h1 className='text-3xl py-4 border-b text-blue-600 border-blue-600 font-bold'>Public Opinions</h1>
-                        <h1 className='text-5xl py-4 font-bold'>What People Think About Us?</h1>
+                    <div className='col-span-4 duration-300 hover:scale-95'>
+                        <h1 className='text-xl md:text-3xl py-4 border-b text-blue-600 border-blue-600 font-bold'>Public Opinions</h1>
+                        <h1 className='text-xl md:text-5xl py-4 font-bold'>What People Think About Us?</h1>
                         <div>
                             {slides.map((x: any, index: number) => {
                                 return index === currentSlide ? (
@@ -117,40 +117,58 @@ export const About = (props: Props) => {
                     </div>
                 </div>
 
-                {/* Why Wander Women  */}
+                {/* our team */}
                 <div className='grid grid-cols-4 py-6'>
 
                     <div className='md:col-span-3 col-span-4'>
-                        <h1 className='text-3xl py-4 border-b text-blue-600 border-blue-600 font-bold'>Our Team</h1>
-                        <h1 className='text-5xl py-4 font-bold'>The Amazing Team</h1>
-                        <div className='grid grid-cols-5 py-6 items-center justify-center gap-4'>
-                            <div className='flex items-center h-40 relative justify-center'>
+                        <h1 className='text-xl md:text-3xl py-4 border-b text-blue-600 border-blue-600 font-bold'>Our Team</h1>
+                        <h1 className='text-xl md:text-5xl py-4 font-bold'>The Amazing Team</h1>
+                        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 py-10 items-center justify-center gap-x-4 gap-y-16 md:gap-4'>
+                            <div className='flex items-center  duration-300 hover:scale-95 h-40 relative justify-center'>
                                 <Image src='/avatar/person1.png' fill alt='' />
+                                <h2 className='absolute text-md -bottom-12 w-full text-center grid font-semibold z-10'>
+                                    John
+                                    <span className='text-sm font-normal'>Co-founder, Wander Women</span>
+                                </h2>
                             </div>
-                            <div className='flex items-center h-40 relative justify-center'>
+                            <div className='flex items-center  duration-300 hover:scale-95 h-40 relative justify-center'>
                                 <Image src='/avatar/person3.png' fill alt='' />
+                                <h2 className='absolute text-md -bottom-12 w-full text-center grid font-semibold z-10'>
+                                    Jannat Mira
+                                    <span className='text-sm font-normal'>Founder, Wander Women</span>
+                                </h2>
                             </div>
-                            <div className='grid
-                             items-center h-40 relative justify-center'>
+                            <div className='grid items-end  duration-300 hover:scale-95 h-40 relative justify-center'>
                                 <Image src='/avatar/person2.png' fill alt='' />
-
+                                <h2 className='absolute text-md -bottom-12 w-full text-center grid font-semibold z-10'>
+                                    Sara Islam
+                                    <span className='text-sm font-normal'>CEO, Wander Women</span>
+                                </h2>
                             </div>
-                            <div className='flex items-center h-40 relative justify-center'>
+                            <div className='flex items-center  duration-300 hover:scale-95 h-40 relative justify-center'>
                                 <Image src='/avatar/person3.png' fill alt='' />
+                                <h2 className='absolute text-md -bottom-12 w-full text-center grid font-semibold z-10'>
+                                    Jenny
+                                    <span className='text-sm font-normal'>Director, Wander Women</span>
+                                </h2>
                             </div>
-                            <div className='flex items-center h-40 relative justify-center'>
+                            <div className='flex items-center  duration-300 hover:scale-95 h-40 relative justify-center'>
                                 <Image src='/avatar/person2.png' fill alt='' />
+                                <h2 className='absolute text-md -bottom-12 w-full text-center grid font-semibold z-10'>
+                                    Trisha
+                                    <span className='text-sm font-normal'>Customer Support, WW</span>
+                                </h2>
                             </div>
                         </div>
                     </div>
 
-                    <div className='md:col-span-1 relative col-span-4 flex items-center justify-center'>
-                        <div className='grid'>
+                    <div className='md:col-span-1 hidden relative col-span-4 md:flex items-center justify-center'>
+                        <div className='grid  duration-300 hover:scale-95'>
                             <div className='relative h-40 w-52'>
-                                <Image className='rotate-12 w-10' src='/bali/five.jpg' fill alt='' />
+                                <Image className='rotate-12 w-10' src='/turkiye/five.jpg' fill alt='' />
                             </div>
                             <div className='relative h-40 w-52'>
-                                <Image className='w-10 -rotate-12 bg-white p-1' src='/bali/four.jpg' fill alt='' />
+                                <Image className='w-10 -rotate-12 bg-white p-1' src='/turkiye/three.jpg' fill alt='' />
                             </div>
                         </div>
                     </div>

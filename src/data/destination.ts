@@ -1,10 +1,10 @@
 export const destinationsData = [
     {
         id: '1',
-        name: 'Istanbul, Turkiye',
+        name: 'Istanbul',
         country: 'Turkiye',
         images: ['/turkiye/one.jpg', '/turkiye/two.jpg', '/turkiye/three.jpg', '/turkiye/four.jpg'],
-        title: 'İstanbul, Türkiye',
+        title: 'Istanbul, Türkiye',
         subTitle: 'Discover the timeless allure of Istanbul, where historic treasures and vibrant culture converge in an unforgettable embrace.',
         about: 'Experience the enchanting fusion of ancient allure and modern vibrancy in Istanbul, where the East meets the West. Immerse yourself in the rich tapestry of history as you wander through the iconic Hagia Sophia and Blue Mosque, marvel at the bustling Grand Bazaar, and sail along the scenic Bosphorus strait. Indulge in the delectable flavors of Turkish cuisine, savoring aromatic spices and culinary delights. With its captivating landscapes, architectural wonders, and warm hospitality, Istanbul invites you on a journey that seamlessly blends tradition with contemporary charm, making it an unforgettable destination for the discerning traveler.',
         weather: ['12°C - 18°C', '12°C - 18°C', '12°C - 18°C', '12°C - 18°C', '12°C - 18°C', '12°C - 18°C',],
@@ -26,7 +26,7 @@ export const destinationsData = [
     },
     {
         id: '2',
-        name: 'Bali, Indonesia',
+        name: 'Bali',
         country: 'Indonesia',
         images: ['/bali/one.jpg', '/bali/two.jpg', '/bali/three.jpg', '/bali/four.jpg'],
         title: 'Bali, Indonesia',
