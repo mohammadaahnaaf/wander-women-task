@@ -42,8 +42,8 @@ const LoginPage = (props: Props) => {
         <title>Wander Women | Login</title>
       </Head>
       <Header setIsLoggedin={(x: boolean) => setIsLoggedin(x)} />
-      <div className="grid h-full w-full items-center">
-        <div className="gap-4 max-w-4xl bg-gradient-to-tr from-green-50 via-pink-50 to-purple-50 rounded-md shadow-xl py-14 px-5 mx-auto w-full grid ">
+      <div className="grid h-full w-full border-y-2 border-pink-200 p-10">
+        <div className="gap-4 max-w-3xl mx-auto ring-2 ring-pink-200 bg-gradient-to-tr shadow-lg rounded-md from-green-50 via-pink-50 to-purple-50 py-14 px-5 w-full grid ">
           <div className="py-4 grid gap-4">
             <h1 className="text-4xl text-center font-bold">Login Here</h1>
             <p className="text-center text-xl">Create an account to take quiz, take part in challenge, and more.</p>
