@@ -45,19 +45,16 @@ export const Home = (props: Props) => {
             localStorage.setItem('type', destination.type),
             localStorage.setItem('date', destination.date),
             localStorage.setItem('members', destination.members),
-            // console.log('ok')
             Router.push('/login')
         ) : (
             localStorage.setItem('type', destination.type),
             localStorage.setItem('date', destination.date),
             localStorage.setItem('members', destination.members)
-            // alert("Your tour is saved")
         )
         if (targetRef.current) {
             targetRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     }
-
 
     const nextSlide = () => {
         setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
@@ -79,11 +76,11 @@ export const Home = (props: Props) => {
             <div className='h-[70vh] bg-[url("/slides/home.png")] bg-cover bg-no-repeat w-full grid items-center z-0 '>
 
                 <Animasyon delay={500}>
-                    <div className='z-20 w-full duration-500 hover:scale-95 max-w-5xl mx-auto flex gap-4 p-5 bg-sky-500 bg-opacity-60 shadow-lg'>
+                    <div className='z-20 w-full duration-500 hover:scale-95 max-w-5xl mx-auto flex gap-4 p-4 bg-sky-500 bg-opacity-60 shadow-lg'>
                         <div className='grid w-full grid-cols-2 md:grid-cols-4 lg:ring-2 ring-white gap-2 md:gap-4 items-center backdrop-blur-sm p-2 md:p-6'>
-                            <div className='col-span-2 md:col-span-4 text-center'>
+                            {/* <div className='col-span-2 md:col-span-4 text-center'>
                                 <h1 className='text-white font-semibold text-2xl'>Book A Spot Now</h1>
-                            </div>
+                            </div> */}
                             <div className='grid items-end'>
                                 <label htmlFor='date' className='text-white text-md font-semibold mb-2'>Check in Date</label>
                                 <input name='date' value={destination.date || ''} onChange={(e) => handleChange(e)} className='bg-[blue] hover:bg-opacity-60 bg-opacity-50 p-2.5 outline-none w-full ring-white ring-2 text-white' type='date' placeholder='Check-in' />
@@ -113,7 +110,7 @@ export const Home = (props: Props) => {
             </div>
 
             {/* Popular */}
-            <div className='p-6 bg-gradient-to-tr from-green-100 via-red-100 to-blue-100 w-full' ref={targetRef}>
+            <div ref={targetRef} className='p-6 bg-gradient-to-tr from-green-100 via-red-100 to-blue-100 w-full'>
                 <h1 className='text-center text-4xl py-10 font-semibold'>Popular Destinations</h1>
                 <div className='grid grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto w-full md:p-4 gap-6 items-center'>
                     {hotels.map((item: any, index: number) => (
@@ -123,7 +120,7 @@ export const Home = (props: Props) => {
             </div>
 
             {/* Featured  */}
-            <div className='p-6 w-full' ref={targetRef}>
+            <div className='p-6 w-full'>
                 <h1 className='text-center text-4xl py-10 font-semibold'>Featured Tours</h1>
                 <div className='grid grid-cols-2 lg:grid-cols-6 max-w-7xl mx-auto w-full md:p-4 gap-6 items-center'>
                     {tours.map((item: any, index: number) => (
@@ -187,6 +184,7 @@ export const Home = (props: Props) => {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }

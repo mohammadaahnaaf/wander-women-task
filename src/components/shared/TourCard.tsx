@@ -14,6 +14,7 @@ type Props = {
         bed: number;
         members: number;
         b_room: number;
+        img: string;
     }
 }
 
@@ -25,7 +26,7 @@ export const TourCard = (props: Props) => {
         <div className='grid grid-cols-3 duration-500 hover:bg-blue-100 cursor-pointer relative hover:scale-95 col-span-2 bg-gray-100 rounded-lg shadow-xl'>
             <Link className='absolute w-full h-full' href={`/destinations/${item.id}`}></Link>
             <div className='col-span-3  min-h-[36vh] md:min-h-[20vh] w-full relative'>
-                <Image className='h-full rounded-t-lg' fill src='/bali/three.jpg' alt='card-image' />
+                <Image className='h-full rounded-t-lg' fill src={item.img} alt='card-image' />
                 <p className='absolute top-2 left-2 bg-white text-sky-800 rounded-lg text-[12px] py-1 px-2'>{item.pool && "Private Pool"}</p>
                 <p className='absolute top-2 right-2 text-white'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
