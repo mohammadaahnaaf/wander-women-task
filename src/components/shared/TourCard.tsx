@@ -23,7 +23,7 @@ export const TourCard = (props: Props) => {
     let item = props.item
 
     return (
-        <div className='grid grid-cols-3 duration-500 hover:bg-blue-100 cursor-pointer relative hover:scale-95 col-span-2 bg-gray-100 rounded-lg shadow-xl'>
+        <div className='grid grid-cols-3 duration-500 hover:bg-blue-100 cursor-pointer relative hover:scale-95 bg-gray-100 rounded-lg shadow-xl'>
             <Link className='absolute w-full h-full' href={`/destinations/${item.id}`}></Link>
             <div className='col-span-3  min-h-[36vh] md:min-h-[20vh] w-full relative'>
                 <Image className='h-full rounded-t-lg' fill src={item.img} alt='card-image' />

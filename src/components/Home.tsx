@@ -114,7 +114,11 @@ export const Home = (props: Props) => {
                 <h1 className='text-center text-4xl py-10 font-semibold'>Popular Destinations</h1>
                 <div className='grid grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto w-full md:p-4 gap-6 items-center'>
                     {hotels.map((item: any, index: number) => (
-                        <RoomCard key={index} item={item} />
+                        <div key={index} className='grid w-full col-span-2'>
+                            <Animasyon delay={(index + 6) * 100}>
+                                <RoomCard item={item} />
+                            </Animasyon>
+                        </div>
                     ))}
                 </div>
             </div>
@@ -124,7 +128,11 @@ export const Home = (props: Props) => {
                 <h1 className='text-center text-4xl py-10 font-semibold'>Featured Tours</h1>
                 <div className='grid grid-cols-2 lg:grid-cols-6 max-w-7xl mx-auto w-full md:p-4 gap-6 items-center'>
                     {tours.map((item: any, index: number) => (
-                        <TourCard key={index} item={item} />
+                        <div key={index} className='grid w-full col-span-2'>
+                            <Animasyon delay={(index + 6) * 100}>
+                                <TourCard item={item} />
+                            </Animasyon>
+                        </div>
                     ))}
                 </div>
             </div>
